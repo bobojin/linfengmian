@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>林风眠作品集 | 图录展页</title>
+  <meta name="description" content="基于《林风眠作品集（上海中国画院）》整理的离线图录展页。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-grain" aria-hidden="true"></div>
+  <main class="site-shell">
+    <header class="masthead">
+      <div class="masthead-copy">
+        <p class="eyebrow">Shanghai Chinese Painting Academy Collection</p>
+        <h1>林风眠作品图录</h1>
+        <p class="subtitle">基于图版顺序重建的离线陈列页。每幅作品保留页码、年代、材质与尺寸。</p>
+        <div class="summary-strip" id="summary-strip"></div>
+      </div>
+      <div class="hero-collage" id="hero-collage" aria-label="作品拼贴"></div>
+    </header>
+
+    <section class="control-bar" aria-label="筛选作品">
+      <label class="search-field">
+        <span>检索</span>
+        <input id="search-input" type="search" placeholder="标题 / 年代 / 页码">
+      </label>
+      <div class="decade-tabs" id="decade-tabs"></div>
+    </section>
+
+    <section class="gallery-meta" id="gallery-meta"></section>
+    <section class="gallery-sections" id="gallery-sections"></section>
+  </main>
+
+  <section class="work-dialog" id="work-dialog" hidden aria-modal="true" role="dialog" aria-labelledby="dialog-title-cn">
+    <div class="work-dialog-backdrop" data-close-dialog></div>
+    <div class="work-dialog-panel" role="document">
+      <button class="work-dialog-close" id="dialog-close" type="button" data-close-dialog aria-label="关闭">×</button>
+      <div class="work-dialog-media">
+        <img id="dialog-image" alt="">
+      </div>
+      <div class="work-dialog-copy">
+        <div class="work-dialog-id" id="dialog-id"></div>
+        <h2 id="dialog-title-cn"></h2>
+        <p class="work-dialog-title-en" id="dialog-title-en"></p>
+        <dl class="work-dialog-facts" id="dialog-facts"></dl>
+        <p class="work-dialog-note" id="dialog-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
